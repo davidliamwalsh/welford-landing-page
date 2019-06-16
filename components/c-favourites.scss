@@ -1,0 +1,86 @@
+.c-favourites {
+  
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+
+    &--title {
+      padding: 0;
+      margin: 0;
+      font-size: 10px;
+      border: 1px solid black;
+    }
+    &--info {
+      padding: 0;
+      margin: 0;
+      font-size: 10px;
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      color: #cacaca;
+      border: 1px solid black;
+    }
+  }
+
+  &__main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+
+    &_item {
+      display: grid;
+      grid-template-rows: repeat(5, 6vw);
+      
+      &--image {
+        overflow: hidden;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        grid-row-start: 1;
+        grid-row-end: 5;
+      }
+
+      &--image1 {
+        background-image: url("images/monika-grabkowska-664428-unsplash.jpg");
+      }
+      &--image2 {
+        background-image: url("images/monika-grabkowska-664428-unsplash.jpg");
+      }
+      &--image3 {
+        background-image: url("images/monika-grabkowska-664428-unsplash.jpg");
+      }
+      &--image4 {
+        background-image: url("images/monika-grabkowska-664428-unsplash.jpg");
+      }
+
+      &__inset {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-row-start: 5;
+        grid-row-end: 6;
+
+        &--title {
+          font-size: 14px;
+          padding: .8em;
+          margin: 0;
+          text-transform: uppercase;
+        }
+  
+        &--price {
+          font-size: 10px;
+          color: #99bcdf;
+          padding: 0;
+          margin: 0;
+          
+          &-sale {
+            text-decoration: line-through;
+            color: #cacaca;
+          }
+        }
+      } 
+    }
+  }
+}

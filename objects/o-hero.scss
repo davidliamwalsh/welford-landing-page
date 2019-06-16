@@ -1,0 +1,11 @@
+.o-nav__hero img {
+  width: 25px;
+  height: 25px;
+}
+
+@media screen and (max-width: $desktop-break) {
+
+  .o-nav__hero img {
+    display: none;
+  }
+}

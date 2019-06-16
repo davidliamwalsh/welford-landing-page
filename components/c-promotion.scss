@@ -1,0 +1,89 @@
+.c-promotion {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(13, 6vw);
+  grid-gap: 2%;
+  margin-top: 1.5em;
+  overflow: hidden;
+
+  &__item {
+    background-size: cover;
+  }
+  
+  &__item1 {
+    background-image: url("images/amy-shamblen-662202-unsplash.jpg");
+    background-position: center center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 8;
+  }
+  &__item2 {
+    background-color: #9ab4b3;
+    grid-column-start: 4;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    
+    &_inset {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding-top: 25%;
+      margin: 0 auto;
+      color: #fff;
+      text-align: center;
+    
+      &-head {
+        padding: 0;
+        margin: 0;
+        font-size: 8px;
+        font-style: italic;
+      }
+      &-main {
+        padding: .4em;
+        margin: 0;
+        letter-spacing: 5px;
+        font-size: calc(1em + 1.5vw);
+        font-weight: 300;
+      }
+      &-line {
+        padding: 0;
+        margin: 0 auto;
+        width: 10%;
+      }
+    }
+  }
+  &__item3 {
+    background-image: url("images/thomas-ae-602202-unsplash.jpg");
+    background-position-y: 15%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 12;
+  }
+  &__item4 {
+    background-image: url("images/beatriz-perez-moya-191993-unsplash.jpg");
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 12;
+  }
+  &__item5 {
+    background-image: url("images/tom-the-photographer-651516-unsplash.jpg");
+    background-position-y: 5%;
+    grid-column-start: 5;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 12;
+  }
+}
+
+@media screen and (max-width: $tablet-break){
+  
+}
+
+@media screen and (max-width: $desktop-break){
+
+}
+
