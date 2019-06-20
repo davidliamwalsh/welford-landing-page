@@ -76,7 +76,7 @@ li {
     align-items: center;
     width: 40%;
     transform: translateX(100%);
-    transition: transform 0.2s ease;
+    transition: transform 1s ease;
     background-color: white; }
     .c-nav__links li {
       opacity: 0; }
@@ -90,7 +90,8 @@ li {
     margin: 5px;
     transition: all 0.2s ease-in; }
   .c-nav--active {
-    transform: translateX(0%); }
+    transform: translateX(0%);
+    z-index: 1; }
   .c-nav .toggle__burger-top {
     transform: rotate(-45deg) translate(-6.5px, 6px); }
   .c-nav .toggle__burger-middle {
