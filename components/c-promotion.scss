@@ -1,50 +1,81 @@
 .c-promotion {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(13, 6vw);
-  grid-gap: 2%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(24, 15vw);
   margin-top: 1.5em;
   overflow: hidden;
 
   &__item {
     background-size: cover;
+    position: relative;
+ 
+    &__promoinset {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      width: 80%;
+      margin: auto;
+      text-align: center;
+      color: $lightfont;
+      letter-spacing: 3px;
+      margin-bottom: 8vw;
+      outline: 1px solid $lightfont;
+      outline-offset: -4px;
+      padding: 2.5vw 0;
+
+      &-title {
+        font-size: 3vw;
+        font-style: bold;
+        padding: 0;
+        margin: 1em 0 .5em 0;
+      }
+      &-info {
+        font-size: 2.7vw;
+        padding: 0;
+        margin: .5em 0 1em 0;
+      }
+    }
   }
   
   &__item1 {
     background-image: url("images/amy-shamblen-662202-unsplash.jpg");
     background-position: center center;
     grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 1;
-    grid-row-end: 8;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 10;
   }
   &__item2 {
     background-color: #9ab4b3;
-    grid-column-start: 4;
-    grid-column-end: 7;
+    grid-column-start: 1;
+    grid-column-end: 2;
     grid-row-start: 1;
-    grid-row-end: 8;
+    grid-row-end: 5;
     
     &_inset {
       display: flex;
       justify-content: center;
       flex-direction: column;
-      padding-top: 25%;
       margin: 0 auto;
       color: #fff;
       text-align: center;
+      margin-top: 12vw;
     
       &-head {
         padding: 0;
         margin: 0;
-        font-size: 8px;
+        font-size: 2vw;
         font-style: italic;
+        font-family: 'Playfair Display', serif;
       }
       &-main {
-        padding: .4em;
         margin: 0;
         letter-spacing: 5px;
-        font-size: calc(1em + 1.5vw);
+        font-size: 9vw;
         font-weight: 300;
       }
       &-line {
@@ -58,32 +89,82 @@
     background-image: url("images/thomas-ae-602202-unsplash.jpg");
     background-position-y: 15%;
     grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 8;
-    grid-row-end: 12;
+    grid-column-end: 2;
+    grid-row-start: 10;
+    grid-row-end: 15;
   }
   &__item4 {
     background-image: url("images/beatriz-perez-moya-191993-unsplash.jpg");
-    grid-column-start: 3;
-    grid-column-end: 5;
-    grid-row-start: 8;
-    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 15;
+    grid-row-end: 20;
   }
   &__item5 {
     background-image: url("images/tom-the-photographer-651516-unsplash.jpg");
     background-position-y: 5%;
-    grid-column-start: 5;
-    grid-column-end: 7;
-    grid-row-start: 8;
-    grid-row-end: 12;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 20;
+    grid-row-end: 25;
   }
 }
 
-@media screen and (max-width: $tablet-break){
-  
+@media screen and (min-width: $tablet-break){
+
+  .c-promotion {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(13, 6vw);
+    grid-gap: 2%;
+    
+    &__item1 {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      grid-row-start: 1;
+      grid-row-end: 8;
+    }
+    &__item2 {
+      grid-column-start: 4;
+      grid-column-end: 7;
+      grid-row-start: 1;
+      grid-row-end: 8;
+
+      &_inset-main {
+        font-size: 6vw;
+      }
+    }
+
+    &__item__promoinset {
+      margin-bottom: 5vw;
+
+      &-title {
+        font-size: 1.5vw;
+        margin: .2em 0;
+      }
+      &-info {
+        font-size: 1vw;
+        margin: .2em 0;
+      }
+    }
+    
+    &__item3 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 8;
+      grid-row-end: 12;
+    }
+    &__item4 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 8;
+      grid-row-end: 12;
+    }
+    &__item5 {
+    
+      grid-column-start: 5;
+      grid-column-end: 7;
+      grid-row-start: 8;
+      grid-row-end: 12;
+    }
+  }
 }
-
-@media screen and (max-width: $desktop-break){
-
-}
-

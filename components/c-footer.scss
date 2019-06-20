@@ -1,22 +1,70 @@
 .c-footer {
-  height: 4em;
+  font-size: 2vw;
+  padding: 1em 0 2em 0;
 
   &__head {
     display: flex;
     justify-content: center;
     width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid $lightfont;
+    border-bottom: 1px solid $lightfont;
+    margin: 2em 0;
 
     &--links {
       padding: .5em 1em;
-      list-style: none;
       text-decoration: none;
-      font-size: 14px;
+      a {
+       color: $lightfont;
+      }
     }
   }
 
   &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
+    &_forum {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+
+      &--links {
+        margin: 0 2em;
+        i {
+          color: $lightfont;
+          font-size: 2vw;
+          border-radius: 50%;
+          border: 1px solid $lightfont;
+          padding: .5em;
+        }
+      }
+    }
+
+    &_brand {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      &--links {
+        margin: auto;
+      }
+      &--copyright {
+        color: $lightfont;
+        text-transform: uppercase;
+        padding: 1em;
+      }
+      &--location {
+        font-style: italic;
+        font-family: 'Playfair Display', serif;
+        letter-spacing: 3px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet-break){
+  .c-footer {
+   font-size: 1.5vw;
   }
 }
